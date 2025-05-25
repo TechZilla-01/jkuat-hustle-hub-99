@@ -111,10 +111,10 @@
   }
   
   .btn-primary {
-    @apply bg-jkuat-green hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5;
+    @apply bg-brand-green hover:bg-brand-green-dark text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5;
   }
   
   .btn-secondary {
-    @apply bg-white border-2 border-jkuat-green text-jkuat-green hover:bg-jkuat-green hover:text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300;
+    @apply bg-white border-2 border-brand-green text-brand-green hover:bg-brand-green hover:text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300;
   }
 }
