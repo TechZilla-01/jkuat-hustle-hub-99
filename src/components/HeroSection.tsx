@@ -19,9 +19,12 @@ const HeroSection = () => {
               Discover amazing products from your peers!
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+            <div className="flex flex-col gap-4 mb-12">
               <Button size="lg" className="bg-white text-jkuat-green hover:bg-gray-100 font-semibold px-8 py-4 text-lg">
                 Start Selling <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-jkuat-green font-semibold px-8 py-4 text-lg">
+                Start Buying <ShoppingBag className="ml-2 h-5 w-5" />
               </Button>
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-jkuat-green font-semibold px-8 py-4 text-lg">
                 Shop Now
