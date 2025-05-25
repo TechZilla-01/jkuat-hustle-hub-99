@@ -13,7 +13,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <div className="text-2xl font-bold text-jkuat-green">
-              JKUAT <span className="text-jkuat-blue">Hustle Hub</span>
+              Campus <span className="text-jkuat-blue">Plaza</span>
             </div>
           </div>
 
