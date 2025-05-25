@@ -5,40 +5,46 @@ import { Link } from 'react-router-dom';
 
 const categories = [
   {
+    name: 'Services',
+    icon: Wrench,
+    count: '150+ services',
+    color: 'from-green-500 to-green-600',
+    description: 'Tutoring, Design, Programming',
+  },
+  {
     name: 'Books & Stationery',
     icon: Book,
     count: '450+ items',
     color: 'from-blue-500 to-blue-600',
+    description: 'Textbooks, Notes, Supplies',
   },
   {
     name: 'Electronics',
     icon: Smartphone,
     count: '280+ items',
     color: 'from-purple-500 to-purple-600',
+    description: 'Phones, Laptops, Accessories',
   },
   {
     name: 'Food & Beverages',
     icon: Coffee,
     count: '320+ items',
     color: 'from-orange-500 to-orange-600',
+    description: 'Snacks, Meals, Drinks',
   },
   {
     name: 'Fashion',
     icon: Shirt,
     count: '190+ items',
     color: 'from-pink-500 to-pink-600',
-  },
-  {
-    name: 'Services',
-    icon: Wrench,
-    count: '120+ items',
-    color: 'from-green-500 to-green-600',
+    description: 'Clothing, Shoes, Accessories',
   },
   {
     name: 'Entertainment',
     icon: GamepadIcon,
     count: '85+ items',
     color: 'from-red-500 to-red-600',
+    description: 'Games, Events, Activities',
   },
 ];
 
@@ -48,10 +54,10 @@ const FeaturedCategories = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-brand-black mb-4">
-            Shop by Category
+            Shop Products & Book Services
           </h2>
           <p className="text-xl text-brand-grey max-w-2xl mx-auto">
-            Find exactly what you need from our diverse range of student-focused categories
+            Find products and hire talented students for various services across JKUAT
           </p>
         </div>
 
@@ -68,8 +74,11 @@ const FeaturedCategories = () => {
                     <h3 className="font-semibold text-brand-black mb-1 text-sm">
                       {category.name}
                     </h3>
-                    <p className="text-xs text-brand-grey">
+                    <p className="text-xs text-brand-grey mb-1">
                       {category.count}
+                    </p>
+                    <p className="text-xs text-brand-grey opacity-75">
+                      {category.description}
                     </p>
                   </CardContent>
                 </Card>

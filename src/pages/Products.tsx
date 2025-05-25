@@ -4,7 +4,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Star, Heart, ShoppingCart, Filter, Grid, List } from 'lucide-react';
+import { Star, Heart, ShoppingCart, Filter, Grid, List, Clock, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const products = [
@@ -17,8 +17,9 @@ const products = [
     rating: 4.8,
     reviews: 45,
     image: "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-    category: "Food & Snacks",
+    category: "Food & Beverages",
     badge: "Fast Delivery",
+    type: "product",
     sellerId: "seller123"
   },
   {
@@ -32,12 +33,60 @@ const products = [
     image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
     category: "Electronics",
     badge: "Top Rated",
+    type: "product",
     sellerId: "seller456"
   },
-  // Add more products...
+  {
+    id: 3,
+    name: "Math & Physics Tutoring",
+    price: "KES 500/hr",
+    originalPrice: "KES 800/hr",
+    seller: "Academic Pro",
+    rating: 5.0,
+    reviews: 67,
+    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    category: "Services",
+    badge: "Expert Tutor",
+    type: "service",
+    duration: "1-2 hours",
+    location: "Library/Online",
+    sellerId: "tutor123"
+  },
+  {
+    id: 4,
+    name: "Logo Design Service",
+    price: "KES 2000",
+    originalPrice: "KES 3500",
+    seller: "Creative Studio",
+    rating: 4.7,
+    reviews: 34,
+    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    category: "Services",
+    badge: "Quick Delivery",
+    type: "service",
+    duration: "2-3 days",
+    location: "Remote",
+    sellerId: "designer456"
+  },
+  {
+    id: 5,
+    name: "Website Development",
+    price: "KES 15000",
+    originalPrice: "KES 25000",
+    seller: "Code Masters",
+    rating: 4.9,
+    reviews: 28,
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    category: "Services",
+    badge: "Professional",
+    type: "service",
+    duration: "1-2 weeks",
+    location: "Remote/Campus",
+    sellerId: "dev789"
+  }
 ];
 
-const categories = ["All", "Food & Snacks", "Electronics", "Fashion", "Study Materials", "Services"];
+const categories = ["All", "Services", "Food & Beverages", "Electronics", "Fashion", "Books & Stationery"];
 
 const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -55,8 +104,8 @@ const Products = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Page Header */}
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-brand-black mb-2">All Products</h1>
-          <p className="text-brand-grey">Discover amazing products from JKUAT students</p>
+          <h1 className="text-3xl font-bold text-brand-black mb-2">Products & Services</h1>
+          <p className="text-brand-grey">Discover amazing products and services from JKUAT students</p>
         </div>
 
         {/* Filters and Controls */}
@@ -139,6 +188,15 @@ const Products = () => {
                     </span>
                   </div>
                   
+                  {/* Service Type Badge */}
+                  {product.type === 'service' && (
+                    <div className="absolute top-3 right-12">
+                      <span className="bg-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                        Service
+                      </span>
+                    </div>
+                  )}
+                  
                   {/* Wishlist */}
                   <div className="absolute top-3 right-3">
                     <Button size="icon" variant="ghost" className="bg-white/80 hover:bg-white text-red-500 hover:text-red-600">
@@ -168,6 +226,20 @@ const Products = () => {
                     </div>
                   </div>
                   
+                  {/* Service specific info */}
+                  {product.type === 'service' && (
+                    <div className="mb-3 space-y-1">
+                      <div className="flex items-center text-xs text-brand-grey">
+                        <Clock className="h-3 w-3 mr-1" />
+                        <span>{product.duration}</span>
+                      </div>
+                      <div className="flex items-center text-xs text-brand-grey">
+                        <MapPin className="h-3 w-3 mr-1" />
+                        <span>{product.location}</span>
+                      </div>
+                    </div>
+                  )}
+                  
                   <div className="mb-3">
                     <span className="text-sm text-brand-grey">by {product.seller}</span>
                   </div>
@@ -184,7 +256,7 @@ const Products = () => {
                       className="bg-brand-green hover:bg-brand-green-dark text-white transition-all duration-300"
                     >
                       <ShoppingCart className="h-4 w-4 mr-1" />
-                      Add
+                      {product.type === 'service' ? 'Book' : 'Add'}
                     </Button>
                   </div>
                 </div>
@@ -196,7 +268,7 @@ const Products = () => {
         {/* Load More */}
         <div className="text-center mt-12">
           <Button size="lg" variant="outline" className="border-brand-green text-brand-green hover:bg-brand-green hover:text-white px-8">
-            Load More Products
+            Load More Products & Services
           </Button>
         </div>
       </div>
