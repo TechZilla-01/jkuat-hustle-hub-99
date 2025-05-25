@@ -22,6 +22,7 @@ const Header = () => {
           <nav className="hidden md:flex items-center space-x-8">
             <Link to="/" className="text-brand-grey hover:text-brand-green transition-all duration-300 font-medium">Home</Link>
             <Link to="/products" className="text-brand-grey hover:text-brand-green transition-all duration-300 font-medium">Products</Link>
+            <Link to="/services" className="text-brand-grey hover:text-brand-green transition-all duration-300 font-medium">Services</Link>
             <Link to="/seller" className="text-brand-grey hover:text-brand-green transition-all duration-300 font-medium">Sell</Link>
             <Link to="/contact" className="text-brand-grey hover:text-brand-green transition-all duration-300 font-medium">Contact</Link>
           </nav>
@@ -86,6 +87,7 @@ const Header = () => {
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
               <Link to="/" className="block px-3 py-2 text-brand-grey hover:text-brand-green transition-colors font-medium">Home</Link>
               <Link to="/products" className="block px-3 py-2 text-brand-grey hover:text-brand-green transition-colors font-medium">Products</Link>
+              <Link to="/services" className="block px-3 py-2 text-brand-grey hover:text-brand-green transition-colors font-medium">Services</Link>
               <Link to="/seller" className="block px-3 py-2 text-brand-grey hover:text-brand-green transition-colors font-medium">Sell</Link>
               <Link to="/contact" className="block px-3 py-2 text-brand-grey hover:text-brand-green transition-colors font-medium">Contact</Link>
               <div className="pt-4 pb-3 border-t border-gray-200">

@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from '@/components/ui/card';
 import { Book, Smartphone, Coffee, Shirt, Wrench, GamepadIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -54,7 +53,7 @@ const FeaturedCategories = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-brand-black mb-4">
-            Shop Products & Book Services
+            Shop by Category
           </h2>
           <p className="text-xl text-brand-grey max-w-2xl mx-auto">
             Find products and hire talented students for various services across JKUAT
