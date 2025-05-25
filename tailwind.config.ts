@@ -63,12 +63,16 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// JKUAT Brand Colors
-				jkuat: {
-					green: '#059669',
-					red: '#DC2626',
-					blue: '#2563EB',
-					white: '#FFFFFF'
+				// Modern Multivendor Color Scheme
+				brand: {
+					green: '#10B981',
+					'green-dark': '#059669',
+					'green-light': '#34D399',
+					grey: '#6B7280',
+					'grey-dark': '#374151',
+					'grey-light': '#F3F4F6',
+					black: '#111827',
+					'black-light': '#1F2937'
 				}
 			},
 			borderRadius: {
@@ -115,13 +119,24 @@ export default {
 						opacity: '1',
 						transform: 'scale(1)'
 					}
+				},
+				'slide-in-left': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateX(-10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateX(0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in-up': 'fade-in-up 0.6s ease-out',
-				'scale-in': 'scale-in 0.3s ease-out'
+				'scale-in': 'scale-in 0.3s ease-out',
+				'slide-in-left': 'slide-in-left 0.3s ease-out'
 			}
 		}
 	},
